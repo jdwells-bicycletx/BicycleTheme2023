@@ -1,0 +1,90 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  envir = globalenv()
+)
+```
+
+# BicycleTheme2023
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of BicycleTheme2023 is to allow all Bicycle users of ggplot2 to create Bicycle-themes figures for presentations/posters/dashboards/etc.
+
+## Installation
+
+You can install the development version of BicycleTheme2023 from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("jdwells-bicycletx/BicycleTheme2023")
+```
+```{r source_code, echo = FALSE}
+source('R/skeleton_theme.R')
+source('R/check_fonts.R')
+```
+
+The first time you install this package, YOU MUST run:
+```{r font, results='hide', warning=FALSE}
+check_fonts()
+```
+This may take a minute
+
+## Examples
+
+This is a basic example which shows the use of one color in the theme:
+
+```{r single_color}
+library(BicycleTheme2023)
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg)) +
+  geom_point(color = bicycle_cols('violet'),
+             size = 4, alpha = .8)
+```
+
+You can reference individual colors using:
+
+```{r index_color}
+bicycle_pal('bright')(2)
+```
+
+STILL NEEDED: a function to list out the palettes and a function to list out the colors
+
+Coloring by a continuous variable:
+
+```{r continuous}
+ggplot(mtcars, aes(wt, mpg, color = mpg)) +
+  geom_point(size = 4) + theme_bicycle() + 
+  scale_color_bicycle(palette = 'main', discrete = FALSE)
+```
+
+Coloring by a discrete variable:
+
+```{r discrete}
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+  geom_point(size = 4) + theme_bicycle() +
+  scale_color_bicycle(palette = 'main')
+```
+
+Filling by discrete variable:
+
+```{r fill_discrete}
+ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
+  geom_bar() +
+  theme_bicycle() +
+  scale_fill_bicycle(palette = "grays")
+```
+
+TO BE ADDED: figures that show the colors and the palettes
+
+To use in your scripts: theme_set(theme_bicycle()). Since this is a skeleton theme, you can always add ggplot2 arguments as needed
