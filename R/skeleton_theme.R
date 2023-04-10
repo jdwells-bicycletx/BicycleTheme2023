@@ -88,7 +88,7 @@ bicycle_palettes <- list(
   greens = bicycle_cols('mint', 'applegreen', 'forestgreen', 'lockwood'),
   blues = bicycle_cols('royalblue', 'majorelleblue', 'skyblue', 'cyan'),
   purples = bicycle_cols('lavender', 'orchid', 'hotpink', 'violet'),
-  grays = bicycle_cols('charcoal', 'graphite', 'stone', 'steel')
+  grays = bicycle_cols('charcoal', 'graphite', 'stone', 'steel'),
   all_cols = bicycle_cols()
 )
 
