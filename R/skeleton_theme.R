@@ -83,7 +83,7 @@ bicycle_palettes <- list(
   main = bicycle_cols('warmred', 'mint', 'royalblue', 'lavender', 'charcoal'),
   cool = bicycle_cols('grapefruit', 'applegreen', 'majorelleblue', 'orchid', 'graphite'),
   bright = bicycle_cols('citrus', 'forestgreen', 'skyblue', 'hotpink', 'stone'),
-  lastresort = bicycle_cols('lemon', 'lockwood', 'cyan', 'violet', 'steel'),
+  bold = bicycle_cols('lemon', 'lockwood', 'cyan', 'violet', 'steel'),
   reds = bicycle_cols('warmred', 'grapefruit', 'citrus', 'lemon'),
   greens = bicycle_cols('mint', 'applegreen', 'forestgreen', 'lockwood'),
   blues = bicycle_cols('royalblue', 'majorelleblue', 'skyblue', 'cyan'),
