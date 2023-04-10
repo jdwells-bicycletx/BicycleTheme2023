@@ -89,6 +89,7 @@ bicycle_palettes <- list(
   blues = bicycle_cols('royalblue', 'majorelleblue', 'skyblue', 'cyan'),
   purples = bicycle_cols('lavender', 'orchid', 'hotpink', 'violet'),
   grays = bicycle_cols('charcoal', 'graphite', 'stone', 'steel')
+  all_cols = bicycle_cols()
 )
 
 ## STILL NEED A PALETTE THAT HAS THEM ALL!!!!!
